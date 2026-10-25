@@ -2,9 +2,11 @@
 import { useState } from "react";
 import "./App.css";
 
+
 const API_URL =
   import.meta.env.VITE_API_URL ||
-  "http://127.0.0.1:8000";
+  "https://personalized-travel-itinerary-planner-79m9.onrender.com";
+
 
 function App() {
   const [destination, setDestination] = useState("");
