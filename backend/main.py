@@ -16,6 +16,7 @@ load_dotenv(ENV_FILE, override=True)
 app = FastAPI(title="Travel Itinerary Planner API", version="0.1.0")
 
 # Allow the React frontend to access the backend
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
@@ -23,11 +24,15 @@ app.add_middleware(
         "http://localhost:5174",
         "http://127.0.0.1:5173",
         "http://127.0.0.1:5174",
+        "https://personalized-trav-git-edcc65-akshita-arwals-projects-c1bfbf62.vercel.app",
+        "https://personalized-travel-itinerary-planner-115k2r4bx.vercel.app",
+        "https://personalized-travel-itinerary-plann-lime.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Initialize Supabase
 SUPABASE_URL = os.getenv("SUPABASE_URL")
