@@ -19,15 +19,17 @@ app = FastAPI(title="Travel Itinerary Planner API", version="0.1.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://localhost:5174",
-        "http://127.0.0.1:5173",
-        "http://127.0.0.1:5174",
-        "https://personalized-trav-git-edcc65-akshita-arwals-projects-c1bfbf62.vercel.app",
-        "https://personalized-travel-itinerary-planner-115k2r4bx.vercel.app",
-        "https://personalized-travel-itinerary-plann-lime.vercel.app",
-    ],
+    
+allow_origins=[
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "http://127.0.0.1:5173",
+    "http://127.0.0.1:5174",
+    "https://personalized-travel-itinerary-planner-e7gxst46x.vercel.app",
+    "https://personalized-travel-itinerary-planner-115k2r4bx.vercel.app",
+    "https://personalized-travel-itinerary-plann-lime.vercel.app",
+],
+
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
